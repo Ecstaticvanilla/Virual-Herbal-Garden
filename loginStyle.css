@@ -1,0 +1,138 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('background1.jpg'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.group
+{
+    display:inline-flex;
+    justify-content: center;
+}
+
+.dialog
+{
+    display: flex;
+    justify-content: center;
+
+    width: 350px;
+    padding: 30px;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    background: transparent;
+    background-color: rgba(36,197,207,0.06);
+    color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.205);
+    transition-property: transform;
+    transition-duration: 1500ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 200ms;
+    background-color: rgba(0, 20, 0, 0.15);
+}
+
+.dialog form
+{
+    width: 80%;
+}
+
+.dialog h1
+{
+    text-align: center;
+}
+
+.inputBox
+{
+    width: 100%;
+    margin-top: 45px;
+}
+
+.inputBox .textBox
+{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.textBox input
+{
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0px 10px 0px 20px;
+    font-size: 16px;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.037);
+    outline: none;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: rgba(240, 248, 255, 0.4);
+    color: aliceblue;
+}
+
+.inputBox input::placeholder
+{
+    color: rgba(240, 248, 255, 0.704);
+    font-size: 14px;
+}
+
+.dialog p
+{
+    text-align: center;
+}
+
+.dialog .buttonDiv
+{
+    width: 100%;
+    margin: 30px 0px 10px 0px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.dialog button
+{
+    background-color: rgba(240, 248, 255, 0.762);
+    width: 80%;
+    border-radius: 18px;
+    border: none;
+    color: rgb(9,106,83);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.dialog button:hover
+{
+    opacity: 0.84;
+}
+
+.dialog button:active
+{
+    opacity: 0.6;
+}
+
+/* #signUpLink:hover
+{
+    cursor: ;
+} */
+
+#dlg1
+{
+    position: absolute;
+    margin: 100vh;
+    backdrop-filter: blur(20px);
+}
