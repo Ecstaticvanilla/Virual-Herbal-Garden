@@ -125,10 +125,15 @@ body
     opacity: 0.6;
 }
 
-/* #signUpLink:hover
+#signUpLink:hover
 {
-    cursor: ;
-} */
+    cursor:pointer;
+}
+
+#logInLink:hover
+{
+    cursor:pointer;
+}
 
 #dlg1
 {
