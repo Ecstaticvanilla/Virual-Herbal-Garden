@@ -1,42 +1,60 @@
-document.querySelector("#pass").addEventListener("keyup", function(event)
+document.querySelectorAll(".dialog").forEach(elem => 
 {
-    let pwd=document.querySelector("#pass").value;
-    let label=document.querySelector("p");
-    if(pwd)
+    elem.querySelector("#pass").addEventListener("keyup",function(event)
     {
-        if(pwd.length>=8)
+        let pwd=elem.querySelector("#pass").value;
+        let label=elem.querySelector("p");
+        if(pwd)
         {
-            if(!(/\d/.test(pwd)))
+            if(pwd.length>=8)
             {
-                label.innerHTML="Please add atleast one number.";
-            }
-            else
-            {
-                if(!(/[A-Z]/.test(pwd)))
+                if(!(/\d/.test(pwd)))
                 {
-                    label.innerHTML="Please add atleast one Uppercase Letter [A-Z]"
+                    label.innerHTML="Please add atleast one number.";
                 }
                 else
                 {
-                    if(!(/[!@#$%^&*_]/.test(pwd)))
+                    if(!(/[A-Z]/.test(pwd)))
                     {
-                        label.innerHTML="Please add atleast one Special Character"
+                        label.innerHTML="Please add atleast one Uppercase Letter [A-Z]"
                     }
                     else
                     {
-                        label.innerHTML="Password acceptable."
+                        if(!(/[!@#$%^&*_]/.test(pwd)))
+                        {
+                            label.innerHTML="Please add atleast one Special Character"
+                        }
+                        else
+                        {
+                            label.innerHTML="Password acceptable"
+                        }
                     }
                 }
+            }
+            else
+            {
+                label.innerHTML="Please enter atleast 8 characters"
             }
         }
         else
         {
-            label.innerHTML="Please enter atleast 8 characters."
+            label.innerHTML="Please enter a password";
         }
+    })
+});
+
+document.querySelector("#passCnfm").addEventListener("keyup", function(event)
+{
+    let pwd=document.querySelector("#dlg1 #pass").value;
+    let cnfPwd=document.querySelector("#passCnfm").value;
+    let label=document.querySelector("#dlg1 p");
+    if(pwd==cnfPwd)
+    {
+        label.innerHTML="Password Matches";
     }
     else
     {
-        label.innerHTML="No password detected";
+        label.innerHTML="Please type same password again";
     }
 });
 
