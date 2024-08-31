@@ -3,7 +3,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url('background1.jpg'), no-repeat;
+    background:url('/images/background2_warm_green.jpg'), no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -22,7 +22,6 @@ body
 {
     display: flex;
     justify-content: center;
-
     width: 350px;
     padding: 30px;
     padding-top: 7px;
@@ -32,15 +31,16 @@ body
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.25);
     background: transparent;
-    background-color: rgba(36,197,207,0.06);
     color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(6px);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.205);
-    transition-property: transform;
-    transition-duration: 1500ms;
-    transition-timing-function: ease-in-out;
-    transition-delay: 200ms;
-    background-color: rgba(0, 20, 0, 0.15);
+    transition: transform 1500ms ease-in-out, backdrop-filter 200ms ease-in-out;
+    background-color: rgba(3, 84, 45, 0.45);
+    box-shadow: 0px 0px 130px rgb(6, 51, 40);
+}
+.dialog:focus-within,.dialog:hover
+{
+    backdrop-filter: blur(12px);
 }
 
 .dialog form
@@ -88,6 +88,12 @@ body
     font-size: 14px;
 }
 
+.inputBox input:focus
+{
+    /* color: rgba(240, 248, 255, 0.704); */
+    border-width: 2px;
+}
+
 .dialog p
 {
     text-align: center;
@@ -105,10 +111,11 @@ body
 .dialog button
 {
     background-color: rgba(240, 248, 255, 0.762);
-    width: 80%;
+    width: 60%;
     border-radius: 18px;
     border: none;
-    color: rgb(9,106,83);
+    color: rgb(3,84,45);
+    font-size: 14px;
     opacity: 1;
     transition-property: opacity;
     transition-duration: 200ms;
@@ -122,22 +129,17 @@ body
 
 .dialog button:active
 {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
-#signUpLink:hover
+.links:hover
 {
     cursor:pointer;
-}
-
-#logInLink:hover
-{
-    cursor:pointer;
+    color: rgba(240, 248, 255, 0.5);
 }
 
 #dlg1
 {
     position: absolute;
     margin: 100vh;
-    backdrop-filter: blur(20px);
 }

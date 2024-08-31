@@ -64,7 +64,7 @@ document.querySelector("#signUpLink").addEventListener("click",function(event)
     dialog1.style.transform = "translate(0px, -100vh)";
     
     let dialog2 = document.querySelector("#dlg1");
-    dialog2.style.transform = "translate(0px, -100vh)";
+    dialog2.style.transform = "translate(0px, -105vh)";
 });
 
 document.querySelector("#logInLink").addEventListener("click",function(event)
